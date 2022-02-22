@@ -28,8 +28,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
+    "local": "npx hardhat run scripts/run.js",
     "mumbai": "npx hardhat run scripts/deploy.js --network mumbai",
-    "local": "npx hardhat run scripts/run.js"
+    "polygon": "npx hardhat run scripts/deploy.js --network mainnet"
   },
   "eslintConfig": {
     "extends": [

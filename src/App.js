@@ -473,7 +473,7 @@ const App = () => {
             target="_blank"
             rel="noreferrer"
           >{`A`}</a>
-          &nbsp; X&nbsp;
+          &nbsp;||&nbsp;
           <a
             className="footer-text"
             href={TWITTER_LINK_BUILDSPACE}

@@ -1,16 +1,35 @@
-# buildspace DNS starter project
+# :chains: Chain :chains:
 
-### **Welcome 👋**
+> Custom DNS via Polygon
 
-To get started with this course, clone this repo and follow these commands:
+### [Live Site](https://chain-domain.vercel.app/)
+
+## Environment Variables
+
+```
+ALCHEMY_API_KEY_URL=
+PROD_ALCHEMY_API_KEY_URL=
+PRIVATE_KEY_MAIN=
+```
+## Built Using
+
+- [React](https://github.com/facebook/react)
+- [Hardhat](https://hardhat.org/)
+- [Ethers](https://ethers.org/)
+- [OpenZeppelin](https://openzeppelin.com/)
+- [Alchemy](https://www.alchemy.com/)
+- [Vercel](https://vercel.com)
+
+The frontend of this project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), and the smart contract is deployed to [Polygon Network](https://polygon.technology/).
+
+## Available Scripts
 
 1. Run `npm install` at the root of your directory
-2. Run `npm run start` to start the project
-3. Start coding!
+2. Run `npm run local` to deploy smart contract to local node 
+3. Run `npm run mumbai` to deploy smart contract to polygon mumbai testnet
+4. Run `npm run polygon` to deploy smart contract polygon mainnet
+5. Run `npm run start` to start the project
+6. Start coding!
 
-### What is the `.vscode` Folder?
-If you use VSCode to build your app, we included a list of suggested extensions that will help you build this project! Once you open this project in VSCode, you will see a popup asking if you want to download the recommended extensions :).
 
-
-### **Questions?**
-Have some questions make sure you head over to your [buildspace Dashboard](https://app.buildspace.so/) and link your Discord account so you can get access to helpful channels teaching assistants, and your instructor!
+This build is my personal touch for a project of [Build your own domain service on a Polygon L2 in a weekend](https://app.buildspace.so/projects/CO1f8c72fd-67a3-4f99-90b8-79879c5da1eb) by [Buildspace](https://app.buildspace.so/).

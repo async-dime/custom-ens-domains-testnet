@@ -1,5 +1,5 @@
 {
-  "name": "custom-polygon-domain-service",
+  "name": "custom-polygon-domain-service-testnet",
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
@@ -29,8 +29,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "local": "npx hardhat run scripts/run.js",
-    "mumbai": "npx hardhat run scripts/deploy.js --network mumbai",
-    "polygon": "npx hardhat run scripts/deploy.js --network mainnet"
+    "mumbai": "npx hardhat run scripts/deploy.js --network mumbai"
   },
   "eslintConfig": {
     "extends": [

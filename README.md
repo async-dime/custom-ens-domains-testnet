@@ -1,4 +1,4 @@
-# :chains: Chain :chains:
+# :chains: Chain Mumbai :chains:
 
 > Custom DNS via Polygon - Deployed on Mumbai Testnet
 

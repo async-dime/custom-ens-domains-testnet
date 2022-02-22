@@ -8,8 +8,9 @@ import ethLogo from './assets/ethlogo.png';
 import polygonLogo from './assets/polygonlogo.png';
 import twitterLogo from './assets/twitter-logo.svg';
 import './styles/App.css';
+import { Grid } from 'react-loader-spinner';
 
-const TWITTER_HANDLE = 'p0tat0H8';
+const TWITTER_HANDLE = 'async_dime';
 const TWITTER_LINK = `https://twitter.com/${TWITTER_HANDLE}`;
 const TWITTER_LINK_BUILDSPACE = `https://twitter.com/_buildspace}`;
 
@@ -128,6 +129,7 @@ const App = () => {
       alert('Domain must be at least 3 characters long');
       return;
     }
+    setLoading(true);
     // Calculate price based on the length of the domain
     // 3 chars = 0.5 MATIC, 4 chars = 0.3 MATIC, 5 chars or more = 0.1 MATIC
     const price = domain.length > 4 ? '0.1' : domain.length > 3 ? '0.3' : '0.5';
@@ -179,6 +181,7 @@ const App = () => {
     } catch (err) {
       console.log(err);
     }
+    setLoading(false);
   };
 
   const fetchMints = async () => {
@@ -257,10 +260,7 @@ const App = () => {
         target="_blank"
         rel="noreferrer"
       >
-        <img
-          src="https://i.imgur.com/KMc4Q70.gif"
-          alt="Chain gif"
-        />
+        <img src="https://i.imgur.com/KMc4Q70.gif" alt="Chain gif" />
       </a>
       <button
         onClick={connectWallet}
@@ -307,13 +307,18 @@ const App = () => {
         {editing ? (
           <div className="button-container">
             {/* This will call the updateDomain function we just made */}
-            <button
-              className="cta-button mint-button"
-              disabled={loading}
-              onClick={updateDomain}
-            >
-              Set record
-            </button>
+            {loading === true ? (
+              <LoadingComponent />
+            ) : (
+              <button
+                className="cta-button mint-button"
+                disabled={loading}
+                onClick={updateDomain}
+              >
+                Set record
+              </button>
+            )}
+
             {/* This will let us get out of editing mode by setting editing to
             false */}
             <button
@@ -327,13 +332,19 @@ const App = () => {
           </div>
         ) : (
           // If editing is not true, the mint button will be returned instead
-          <button
-            className="cta-button mint-button"
-            disabled={loading}
-            onClick={mintDomain}
-          >
-            Mint
-          </button>
+          <div className="button-container">
+            {loading === true ? (
+              <LoadingComponent />
+            ) : (
+              <button
+                className="cta-button mint-button"
+                disabled={loading}
+                onClick={mintDomain}
+              >
+                Mint
+              </button>
+            )}
+          </div>
         )}
       </div>
     );
@@ -385,6 +396,12 @@ const App = () => {
       );
     }
   };
+
+  const LoadingComponent = () => (
+    <div style={{ margin: '10px 0' }}>
+      <Grid color="rgb(128, 128, 128)" height={80} width={80} />
+    </div>
+  );
 
   // This runs our function when the page loads.
   useEffect(() => {
@@ -455,7 +472,7 @@ const App = () => {
             href={TWITTER_LINK}
             target="_blank"
             rel="noreferrer"
-          >{`@${TWITTER_HANDLE}`}</a>
+          >{`A`}</a>
           &nbsp; X&nbsp;
           <a
             className="footer-text"

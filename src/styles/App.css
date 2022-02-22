@@ -78,6 +78,22 @@ header{
   color: white;
 }
 
+.cta-button-loading {
+  height: 45px;
+  border: 0;
+  width: auto;
+  padding: auto;
+  padding-left: 40px;
+  padding-right: 40px;
+  border-radius: 10px;
+  background: -webkit-linear-gradient(left, #a200d6, #ff6fdf);
+  background-size: 200% 200%;
+  animation: gradient-animation 4s ease infinite;
+  margin: 20px 10px;
+  border-radius: 20px;
+  padding: 0px 2rem;
+}
+
 .connect-wallet-container {
   padding-top: 2rem;
   padding-bottom: 2rem;
@@ -198,6 +214,16 @@ input:focus {
   align-items: center;
   margin-bottom: 10px;
 
+}
+
+.button-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
 }
 
 .tld {
